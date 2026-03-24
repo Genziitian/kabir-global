@@ -442,12 +442,11 @@
         min-height: 320px;
     }
 
-    .hero-title {
-        font-size: 1.5rem;
-    }
-
-    .hero-desc {
-        font-size: 0.8rem;
+    .hero-badge,
+    .hero-title,
+    .hero-desc,
+    .hero-tags {
+        display: none;
     }
 
     .hero-form-card {

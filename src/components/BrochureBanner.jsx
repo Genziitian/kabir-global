@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 import './BrochureBanner.css';
 
 const BROCHURE_URL = 'https://drive.google.com/file/d/1KK3uspwcKnlyFU02TERL7afbkaQHulwz/view?usp=sharing';
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyuxnjG9ELpSdtEoCCwo0KWzT1pau79rCmeLnsZAcJV35_VFAX3Tz6S9Px3xXmkqgap/exec';
 
 export default function BrochureBanner() {
     const [show, setShow] = useState(false);
@@ -36,13 +37,18 @@ export default function BrochureBanner() {
                 if (params.has(param)) payload.append(param, params.get(param));
             });
 
-            await fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', { method: 'POST', body: payload });
+            await fetch(GOOGLE_SHEET_URL, { method: 'POST', body: payload });
         } catch (err) {
             console.error(err);
         }
 
         setStatus('done');
-        setTimeout(() => { close(); setStatus('idle'); setForm({ name: '', email: '', phone: '' }); window.open(BROCHURE_URL, '_blank'); }, 1500);
+        setTimeout(() => {
+            close();
+            setStatus('idle');
+            setForm({ name: '', email: '', phone: '' });
+            window.location.href = '/thank-you';
+        }, 1500);
     };
 
     return (

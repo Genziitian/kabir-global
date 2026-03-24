@@ -55,7 +55,7 @@ export default function CampusLife() {
 
     return (
         <section className="cl" id="campus-life">
-            <div className="cl-header-box">
+            <div className="cl-container">
                 <div className="cl-header-wrap">
                     <div className="cl-header-content">
                         <span className="cl-tag">Holistic Development</span>
@@ -63,42 +63,42 @@ export default function CampusLife() {
                         <p className="cl-sub">Beyond classrooms, we cultivate a vibrant environment where arts, sports, events, and innovation thrive.</p>
                     </div>
                 </div>
-            </div>
 
-            <div className="cl-slider-group">
-                {/* Row 1 — Core Facilities */}
-                <div className="cl-slider-row">
-                    <div className="cl-slider-nav">
-                        <h3 className="cl-row-title">Core Facilities</h3>
-                        <div className="cl-arrows">
-                            <button className="cl-arr" onClick={() => scroll(row1Ref, 'left')} aria-label="Previous">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
-                            </button>
-                            <button className="cl-arr" onClick={() => scroll(row1Ref, 'right')} aria-label="Next">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
-                            </button>
+                <div className="cl-slider-group">
+                    {/* Row 1 — Core Facilities */}
+                    <div className="cl-slider-row">
+                        <div className="cl-slider-nav">
+                            <h3 className="cl-row-title">Core Facilities</h3>
+                            <div className="cl-arrows">
+                                <button className="cl-arr" onClick={() => scroll(row1Ref, 'left')} aria-label="Previous">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
+                                </button>
+                                <button className="cl-arr" onClick={() => scroll(row1Ref, 'right')} aria-label="Next">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div className="cl-track" ref={row1Ref}>
+                            {[...row1, ...row1, ...row1].map((item, i) => <Card key={i} item={item} />)}
                         </div>
                     </div>
-                    <div className="cl-track" ref={row1Ref}>
-                        {[...row1, ...row1, ...row1].map((item, i) => <Card key={i} item={item} />)}
-                    </div>
-                </div>
 
-                {/* Row 2 — Events */}
-                <div className="cl-slider-row">
-                    <div className="cl-slider-nav">
-                        <h3 className="cl-row-title">School Events</h3>
-                        <div className="cl-arrows">
-                            <button className="cl-arr" onClick={() => scroll(row2Ref, 'left')} aria-label="Previous">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
-                            </button>
-                            <button className="cl-arr" onClick={() => scroll(row2Ref, 'right')} aria-label="Next">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
-                            </button>
+                    {/* Row 2 — Events */}
+                    <div className="cl-slider-row">
+                        <div className="cl-slider-nav">
+                            <h3 className="cl-row-title">School Events</h3>
+                            <div className="cl-arrows">
+                                <button className="cl-arr" onClick={() => scroll(row2Ref, 'left')} aria-label="Previous">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m15 18-6-6 6-6" /></svg>
+                                </button>
+                                <button className="cl-arr" onClick={() => scroll(row2Ref, 'right')} aria-label="Next">
+                                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="m9 18 6-6-6-6" /></svg>
+                                </button>
+                            </div>
                         </div>
-                    </div>
-                    <div className="cl-track" ref={row2Ref}>
-                        {[...row2, ...row2].map((item, i) => <Card key={i} item={item} />)}
+                        <div className="cl-track" ref={row2Ref}>
+                            {[...row2, ...row2].map((item, i) => <Card key={i} item={item} />)}
+                        </div>
                     </div>
                 </div>
             </div>
