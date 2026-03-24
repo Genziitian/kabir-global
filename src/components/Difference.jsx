@@ -7,7 +7,7 @@ const pillars = [
         desc: "Curiosity drives every discovery. We don't just teach subjects—we help children fall in love with questions, exploration, and the joy of finding answers."
     },
     {
-        image: '/slide-3.png',
+        image: '/cm-10.jpg',
         title: 'Personal Connections',
         desc: "With excellent student-teacher ratios from the early years, every child is known, seen, and nurtured. We're not just educators—we're partners in each child's journey."
     },
