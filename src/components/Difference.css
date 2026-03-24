@@ -1,0 +1,119 @@
+/* ===== DIFFERENCE SECTION ===== */
+.diff {
+    padding: 64px 0;
+    background: var(--white);
+}
+
+.diff-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.diff-header {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+.diff-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--red);
+    margin-bottom: 12px;
+    line-height: 1.2;
+}
+
+.diff-sub {
+    font-size: 0.85rem;
+    font-weight: 700;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    opacity: 0.8;
+}
+
+/* Grid */
+.diff-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 24px;
+}
+
+/* Card */
+.diff-card {
+    display: flex;
+    flex-direction: column;
+    background: var(--cream);
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.04);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.diff-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+}
+
+.diff-img-wrap {
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+}
+
+.diff-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.diff-card:hover .diff-img-wrap img {
+    transform: scale(1.05);
+}
+
+.diff-content {
+    padding: 24px 24px 32px;
+    flex: 1;
+}
+
+.diff-content h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    color: var(--red);
+    margin-bottom: 12px;
+    line-height: 1.3;
+}
+
+.diff-content p {
+    font-size: 0.9rem;
+    color: var(--text-dark);
+    line-height: 1.6;
+    opacity: 0.85;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .diff-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 600px) {
+    .diff {
+        padding: 48px 0;
+    }
+
+    .diff-title {
+        font-size: 1.8rem;
+    }
+
+    .diff-grid {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .diff-content {
+        padding: 20px 20px 28px;
+    }
+}

@@ -1,0 +1,123 @@
+/* ===== QUICK MENU — DESKTOP SIDE ===== */
+.qm-side {
+    position: fixed;
+    right: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    z-index: 999;
+}
+
+.qm-btn {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    width: 58px;
+    padding: 10px 4px;
+    color: #fff;
+    text-align: center;
+    transition: all 0.25s ease;
+    cursor: pointer;
+}
+
+.qm-btn span {
+    font-size: 0.55rem;
+    font-weight: 700;
+    line-height: 1.2;
+}
+
+.qm-btn:hover {
+    width: 66px;
+}
+
+.qm-navy {
+    background: var(--navy);
+}
+
+.qm-navy:hover {
+    background: var(--navy-dark);
+}
+
+.qm-red {
+    background: var(--red);
+}
+
+.qm-red:hover {
+    background: #8b1a28;
+}
+
+.qm-green {
+    background: #25D366;
+    border-radius: 0 0 0 8px;
+}
+
+.qm-green:hover {
+    background: #1fb855;
+}
+
+/* ===== MOBILE BOTTOM BAR ===== */
+.qm-bottom {
+    display: none;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    background: var(--white);
+    box-shadow: 0 -2px 12px rgba(0, 0, 0, 0.1);
+    border-top: 1px solid #eee;
+}
+
+.qm-bottom-item {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 3px;
+    padding: 8px 4px 10px;
+    color: var(--navy);
+    font-size: 0.65rem;
+    font-weight: 700;
+    text-align: center;
+    transition: all 0.2s ease;
+}
+
+.qm-bottom-item span {
+    font-size: 0.6rem;
+    font-weight: 700;
+    letter-spacing: 0.02em;
+}
+
+.qm-bottom-wa {
+    color: #25D366;
+}
+
+.qm-bottom-apply {
+    background: var(--gold);
+    color: #fff;
+    margin: 6px 4px;
+    border-radius: 8px;
+    padding: 8px 4px;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .qm-side {
+        display: none;
+    }
+
+    .qm-bottom {
+        display: flex;
+    }
+}
+
+/* Add bottom padding to body on mobile to prevent content hiding behind bar */
+@media (max-width: 900px) {
+    .footer {
+        padding-bottom: 60px !important;
+    }
+}

@@ -1,0 +1,122 @@
+/* ===== ACADEMICS SECTION ===== */
+.academics-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+}
+
+.academics-card {
+    background: var(--white);
+    border-radius: 16px;
+    padding: 28px;
+    border: 1px solid rgba(26, 58, 107, 0.08);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.35s var(--ease-smooth);
+    position: relative;
+    overflow: hidden;
+}
+
+.academics-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: var(--card-accent, var(--navy));
+    border-radius: 16px 16px 0 0;
+}
+
+.academics-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lg);
+    border-color: rgba(212, 160, 23, 0.15);
+}
+
+.academics-card-header {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin-bottom: 20px;
+}
+
+.academics-card-icon {
+    font-size: 2.25rem;
+    width: 56px;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--cream);
+    border-radius: 14px;
+    flex-shrink: 0;
+}
+
+.academics-card-level {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: var(--navy);
+    line-height: 1.2;
+}
+
+.academics-card-grades {
+    font-size: 0.8125rem;
+    color: var(--text-light);
+    font-weight: 600;
+}
+
+.academics-card-features {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.academics-card-feature {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 0.875rem;
+    color: var(--text-muted);
+}
+
+.academics-card-check {
+    color: var(--gold);
+    font-weight: 700;
+    font-size: 0.75rem;
+    width: 20px;
+    height: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 160, 23, 0.1);
+    border-radius: 50%;
+    flex-shrink: 0;
+}
+
+.academics-card-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--navy);
+    transition: all 0.2s ease;
+}
+
+.academics-card-link:hover {
+    color: var(--gold);
+    gap: 8px;
+}
+
+@media (max-width: 1024px) {
+    .academics-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .academics-grid {
+        grid-template-columns: 1fr;
+    }
+}

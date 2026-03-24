@@ -1,0 +1,64 @@
+/* ===== WHY CHOOSE SECTION ===== */
+.why-grid {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    gap: 20px;
+}
+
+.why-card {
+    text-align: center;
+    padding: 32px 16px;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 16px;
+    backdrop-filter: blur(8px);
+    transition: all 0.35s var(--ease-smooth);
+}
+
+.why-card:hover {
+    background: rgba(255, 255, 255, 0.1);
+    transform: translateY(-4px);
+    border-color: rgba(212, 160, 23, 0.3);
+}
+
+.why-card-icon {
+    font-size: 2rem;
+    margin-bottom: 12px;
+}
+
+.why-card-number {
+    font-size: 2.25rem;
+    font-weight: 900;
+    color: var(--gold);
+    letter-spacing: -0.02em;
+    margin-bottom: 6px;
+}
+
+.why-card-label {
+    font-size: 0.8125rem;
+    color: rgba(255, 255, 255, 0.65);
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+}
+
+@media (max-width: 1024px) {
+    .why-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+@media (max-width: 480px) {
+    .why-grid {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 12px;
+    }
+
+    .why-card {
+        padding: 24px 12px;
+    }
+
+    .why-card-number {
+        font-size: 1.75rem;
+    }
+}

@@ -1,0 +1,403 @@
+/* ===== STAGES OF EXCELLENCE ===== */
+.stages {
+    padding: 56px 0;
+    background: var(--cream);
+}
+
+.stages-container {
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.stages-header {
+    text-align: center;
+    margin-bottom: 32px;
+}
+
+.stages-title {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 8px;
+}
+
+.stages-sub {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+    max-width: 600px;
+    margin: 0 auto;
+    line-height: 1.6;
+}
+
+/* ===== SCROLL WRAPPER ===== */
+.stages-scroll {
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: thin;
+    scrollbar-color: var(--gold) transparent;
+    padding-bottom: 8px;
+}
+
+.stages-scroll::-webkit-scrollbar {
+    height: 4px;
+}
+
+.stages-scroll::-webkit-scrollbar-thumb {
+    background: var(--gold);
+    border-radius: 4px;
+}
+
+/* ===== CARD GRID ===== */
+.stages-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 18px;
+    min-width: 1000px;
+}
+
+/* ===== STAGE CARD ===== */
+.scard {
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.scard:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 28px rgba(0, 0, 0, 0.1);
+}
+
+/* Card Image */
+.scard-img-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.scard-img-wrap img {
+    width: 100%;
+    height: 160px;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.scard:hover .scard-img-wrap img {
+    transform: scale(1.04);
+}
+
+.scard-age {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 4px 12px;
+    border-radius: 100px;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #fff;
+    letter-spacing: 0.02em;
+}
+
+/* Card Body */
+.scard-body {
+    padding: 16px 16px 18px;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+}
+
+.scard-title {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 2px;
+}
+
+.scard-subtitle {
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 8px;
+}
+
+.scard-desc {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    line-height: 1.55;
+    margin-bottom: 12px;
+}
+
+/* Points */
+.scard-points {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    margin-bottom: 12px;
+}
+
+.scard-points li {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.78rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.scard-points li svg {
+    flex-shrink: 0;
+}
+
+/* Grades */
+.scard-grades {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    margin-bottom: 14px;
+    margin-top: auto;
+}
+
+.scard-grade {
+    padding: 3px 10px;
+    border: 1.5px solid;
+    border-radius: 4px;
+    font-size: 0.65rem;
+    font-weight: 700;
+}
+
+/* Know More Button */
+.scard-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+    width: 100%;
+    padding: 10px;
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: all 0.25s ease;
+}
+
+.scard-btn:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* ===== MODAL POPUP ===== */
+.stages-overlay {
+    position: fixed;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.5);
+    z-index: 9998;
+    backdrop-filter: blur(4px);
+    animation: fadeIn 0.25s ease;
+}
+
+.stages-modal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    max-width: 92vw;
+    background: var(--white);
+    border-radius: 16px;
+    overflow: hidden;
+    z-index: 9999;
+    box-shadow: 0 20px 60px rgba(0, 0, 0, 0.2);
+    animation: modalIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@keyframes modalIn {
+    from {
+        opacity: 0;
+        transform: translate(-50%, -48%);
+    }
+
+    to {
+        opacity: 1;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.stages-modal-close {
+    position: absolute;
+    top: 12px;
+    right: 12px;
+    width: 32px;
+    height: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 50%;
+    color: #fff;
+    cursor: pointer;
+    z-index: 2;
+    transition: background 0.2s ease;
+}
+
+.stages-modal-close:hover {
+    background: rgba(255, 255, 255, 0.35);
+}
+
+.stages-modal-header {
+    padding: 24px 24px 20px;
+    color: #fff;
+}
+
+.stages-modal-header h3 {
+    font-size: 1.25rem;
+    font-weight: 800;
+    margin-bottom: 2px;
+}
+
+.stages-modal-header span {
+    font-size: 0.8rem;
+    opacity: 0.85;
+    font-weight: 600;
+}
+
+/* Modal Form */
+.stages-modal-form {
+    padding: 20px 24px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.smodal-info {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    margin-bottom: 4px;
+}
+
+.stages-modal-form input,
+.stages-modal-form select {
+    width: 100%;
+    padding: 11px 14px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-family: inherit;
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color 0.2s ease;
+}
+
+.stages-modal-form input:focus,
+.stages-modal-form select:focus {
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(26, 58, 107, 0.06);
+}
+
+.stages-modal-form input::placeholder {
+    color: #aaa;
+}
+
+.stages-modal-form select {
+    cursor: pointer;
+    appearance: auto;
+}
+
+.stages-modal-form button {
+    padding: 12px;
+    color: #fff;
+    font-size: 0.875rem;
+    font-weight: 700;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: all 0.25s ease;
+    margin-top: 4px;
+}
+
+.stages-modal-form button:hover {
+    opacity: 0.9;
+    transform: translateY(-1px);
+}
+
+/* Modal Success */
+.stages-modal-success {
+    padding: 40px 24px;
+    text-align: center;
+}
+
+.smodal-check {
+    width: 48px;
+    height: 48px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+}
+
+.stages-modal-success h4 {
+    font-size: 1.125rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 4px;
+}
+
+.stages-modal-success p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 1100px) {
+    .stages-grid {
+        grid-template-columns: repeat(5, 220px);
+    }
+}
+
+@media (max-width: 768px) {
+    .stages-grid {
+        grid-template-columns: repeat(5, 260px);
+        gap: 14px;
+    }
+
+    .stages-title {
+        font-size: 1.5rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .stages {
+        padding: 40px 0;
+    }
+
+    .stages-grid {
+        grid-template-columns: repeat(5, 280px);
+    }
+}

@@ -1,0 +1,123 @@
+/* ===== CTA SECTION ===== */
+.cta-section {
+    position: relative;
+    padding: 80px 0;
+    background: linear-gradient(135deg, var(--navy) 0%, var(--navy-dark) 100%);
+    overflow: hidden;
+}
+
+.cta-bg {
+    position: absolute;
+    inset: 0;
+    background:
+        radial-gradient(ellipse at 90% 10%, rgba(212, 160, 23, 0.1) 0%, transparent 50%),
+        radial-gradient(ellipse at 10% 90%, rgba(178, 34, 52, 0.08) 0%, transparent 50%);
+    pointer-events: none;
+}
+
+.cta-content {
+    position: relative;
+    z-index: 2;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.cta-title {
+    font-size: 2.5rem;
+    font-weight: 900;
+    color: var(--white);
+    line-height: 1.15;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+}
+
+.cta-title-gold {
+    background: linear-gradient(135deg, var(--gold-light), var(--gold));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.cta-desc {
+    font-size: 1.0625rem;
+    color: rgba(255, 255, 255, 0.75);
+    line-height: 1.75;
+    margin-bottom: 32px;
+}
+
+.cta-actions {
+    display: flex;
+    gap: 16px;
+    flex-wrap: wrap;
+}
+
+/* Info Card */
+.cta-info-card {
+    background: rgba(255, 255, 255, 0.07);
+    border: 1px solid rgba(255, 255, 255, 0.12);
+    border-radius: 20px;
+    padding: 32px;
+    backdrop-filter: blur(12px);
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.cta-info-item {
+    display: flex;
+    gap: 14px;
+    align-items: flex-start;
+}
+
+.cta-info-icon {
+    font-size: 1.5rem;
+    flex-shrink: 0;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(212, 160, 23, 0.12);
+    border-radius: 12px;
+}
+
+.cta-info-item strong {
+    color: var(--gold);
+    font-size: 0.8125rem;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 2px;
+}
+
+.cta-info-item p {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9375rem;
+    line-height: 1.5;
+}
+
+@media (max-width: 768px) {
+    .cta-content {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+
+    .cta-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .cta-actions {
+        flex-direction: column;
+    }
+
+    .cta-actions .btn-gold,
+    .cta-actions .btn-outline {
+        width: 100%;
+        justify-content: center;
+    }
+}

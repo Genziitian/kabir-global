@@ -1,0 +1,195 @@
+/* ===== ACHIEVEMENTS ===== */
+.achievements {
+    padding: 64px 0;
+    background: var(--cream);
+    overflow: hidden;
+}
+
+.ach-container {
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+.ach-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 32px;
+}
+
+.ach-tag {
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    display: block;
+    margin-bottom: 8px;
+}
+
+.ach-title {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: var(--navy);
+    line-height: 1.15;
+    margin-bottom: 6px;
+}
+
+.ach-title span {
+    color: var(--red);
+}
+
+.ach-sub {
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.ach-arrows {
+    display: flex;
+    gap: 10px;
+}
+
+.ach-arr {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1.5px solid #d1d5db;
+    border-radius: 50%;
+    background: var(--white);
+    color: var(--navy);
+    cursor: pointer;
+    transition: all 0.25s ease;
+}
+
+.ach-arr:hover {
+    border-color: var(--navy);
+    background: var(--navy);
+    color: #fff;
+    transform: translateY(-2px);
+}
+
+/* Track */
+.ach-track {
+    display: flex;
+    gap: 24px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    -webkit-overflow-scrolling: touch;
+    padding-bottom: 16px;
+    scrollbar-width: none;
+}
+
+.ach-track::-webkit-scrollbar {
+    display: none;
+}
+
+/* Card */
+.ach-card {
+    flex: 0 0 320px;
+    background: var(--white);
+    border-radius: 14px;
+    overflow: hidden;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.05);
+    scroll-snap-align: start;
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    border: 1px solid #f0f0f0;
+}
+
+.ach-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.08);
+}
+
+.ach-img-wrap {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    position: relative;
+    overflow: hidden;
+    background: #eee;
+}
+
+.ach-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.4s ease;
+}
+
+.ach-card:hover .ach-img-wrap img {
+    transform: scale(1.05);
+}
+
+.ach-date-badge {
+    position: absolute;
+    top: 12px;
+    left: 12px;
+    background: rgba(26, 58, 107, 0.9);
+    color: #fff;
+    font-size: 0.7rem;
+    font-weight: 700;
+    padding: 6px 10px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    backdrop-filter: blur(4px);
+}
+
+.ach-content {
+    padding: 24px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    flex: 1;
+}
+
+.ach-content h3 {
+    font-size: 1.15rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 10px;
+    line-height: 1.3;
+}
+
+.ach-content p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .ach-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 16px;
+    }
+}
+
+@media (max-width: 600px) {
+    .achievements {
+        padding: 48px 0;
+    }
+
+    .ach-title {
+        font-size: 1.7rem;
+    }
+
+    .ach-card {
+        flex: 0 0 280px;
+    }
+
+    .ach-content {
+        padding: 20px 16px;
+    }
+
+    .ach-arr {
+        width: 38px;
+        height: 38px;
+    }
+}

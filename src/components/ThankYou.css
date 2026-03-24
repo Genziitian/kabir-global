@@ -1,0 +1,201 @@
+/* ===== THANK YOU PAGE ===== */
+.thankyou {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #f8f9fc, #eef1f7);
+    padding: 40px 20px;
+}
+
+.thankyou-card {
+    background: #fff;
+    border-radius: 20px;
+    padding: 48px 40px;
+    max-width: 520px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+    animation: tySlide 0.5s ease;
+}
+
+@keyframes tySlide {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.ty-check-wrap {
+    margin-bottom: 20px;
+}
+
+.ty-check {
+    width: 64px;
+    height: 64px;
+    background: linear-gradient(135deg, #4CAF50, #2e7d32);
+    color: #fff;
+    font-size: 2rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+    box-shadow: 0 4px 18px rgba(46, 125, 50, 0.25);
+}
+
+.ty-heading {
+    font-size: 2rem;
+    font-weight: 900;
+    color: var(--navy);
+    margin-bottom: 6px;
+}
+
+.ty-sub {
+    font-size: 1rem;
+    font-weight: 600;
+    color: var(--gold);
+    margin-bottom: 10px;
+}
+
+.ty-info {
+    font-size: 0.875rem;
+    color: var(--text-muted);
+    line-height: 1.6;
+    margin-bottom: 24px;
+}
+
+/* Brochure download card */
+.ty-brochure {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 16px;
+    background: linear-gradient(135deg, rgba(245, 166, 35, 0.06), rgba(26, 58, 107, 0.04));
+    border: 1.5px solid rgba(26, 58, 107, 0.08);
+    border-radius: 12px;
+    margin-bottom: 24px;
+    text-align: left;
+}
+
+.ty-brochure-icon {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(245, 166, 35, 0.1);
+    border-radius: 10px;
+    flex-shrink: 0;
+}
+
+.ty-brochure-text {
+    flex: 1;
+}
+
+.ty-brochure-text strong {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 700;
+    color: var(--navy);
+}
+
+.ty-brochure-text span {
+    font-size: 0.75rem;
+    color: var(--text-muted);
+}
+
+.ty-download-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 10px 20px;
+    background: var(--navy);
+    color: #fff;
+    font-size: 0.78rem;
+    font-weight: 700;
+    border-radius: 8px;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+    transition: all 0.25s ease;
+}
+
+.ty-download-btn:hover {
+    background: var(--gold);
+    transform: translateY(-1px);
+}
+
+/* Contact */
+.ty-contact {
+    padding: 16px 0;
+    border-top: 1px solid #eee;
+    margin-bottom: 20px;
+}
+
+.ty-contact p {
+    font-size: 0.8rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+}
+
+.ty-contact-row {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.ty-contact-row a {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.8rem;
+    font-weight: 600;
+    color: var(--navy);
+    transition: color 0.2s ease;
+}
+
+.ty-contact-row a:hover {
+    color: var(--gold);
+}
+
+/* Back link */
+.ty-back {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--text-muted);
+    transition: color 0.2s ease;
+}
+
+.ty-back:hover {
+    color: var(--navy);
+}
+
+@media (max-width: 480px) {
+    .thankyou-card {
+        padding: 32px 20px;
+    }
+
+    .ty-heading {
+        font-size: 1.5rem;
+    }
+
+    .ty-brochure {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .ty-contact-row {
+        flex-direction: column;
+        gap: 8px;
+    }
+}

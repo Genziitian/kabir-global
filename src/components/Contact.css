@@ -1,0 +1,320 @@
+/* ===== CONTACT SECTION ===== */
+.contact {
+    background: var(--cream);
+    padding: 56px 0;
+}
+
+.contact-container {
+    max-width: 1140px;
+    margin: 0 auto;
+    padding: 0 24px;
+    display: grid;
+    grid-template-columns: 380px 1fr;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Left — Info */
+.contact-info {
+    background: var(--navy);
+    padding: 36px 28px;
+    color: #fff;
+}
+
+.contact-tag {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: rgba(255, 255, 255, 0.5);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    display: block;
+    margin-bottom: 6px;
+}
+
+.contact-heading {
+    font-size: 1.6rem;
+    font-weight: 900;
+    margin-bottom: 24px;
+}
+
+.contact-heading span {
+    color: var(--gold);
+}
+
+.contact-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
+}
+
+.c-card {
+    display: flex;
+    gap: 12px;
+    align-items: flex-start;
+    padding: 14px;
+    background: rgba(255, 255, 255, 0.04);
+    border-radius: 10px;
+    border: 1px solid rgba(255, 255, 255, 0.06);
+}
+
+.c-card-icon {
+    width: 36px;
+    height: 36px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(245, 166, 35, 0.1);
+    border-radius: 8px;
+    flex-shrink: 0;
+}
+
+.c-card h4 {
+    font-size: 0.82rem;
+    font-weight: 700;
+    margin-bottom: 3px;
+    color: #fff;
+}
+
+.c-card a,
+.c-card p {
+    font-size: 0.78rem;
+    color: rgba(255, 255, 255, 0.6);
+    line-height: 1.5;
+    display: block;
+    transition: color 0.2s ease;
+}
+
+.c-card a:hover {
+    color: var(--gold);
+}
+
+/* Right — Form */
+.contact-form-wrap {
+    background: var(--white);
+    padding: 36px 32px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.cf-heading {
+    font-size: 1.4rem;
+    font-weight: 800;
+    color: var(--navy);
+    text-align: center;
+    margin-bottom: 2px;
+}
+
+.cf-sub {
+    display: block;
+    text-align: center;
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: var(--gold);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+}
+
+.cf-form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cf-form input,
+.cf-form select,
+.cf-form textarea {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1.5px solid #e0e0e0;
+    border-radius: 8px;
+    font-size: 0.875rem;
+    font-family: inherit;
+    color: var(--text-dark);
+    outline: none;
+    transition: border-color 0.2s ease;
+    background: #fafafa;
+}
+
+.cf-form input:focus,
+.cf-form select:focus,
+.cf-form textarea:focus {
+    border-color: var(--navy);
+    box-shadow: 0 0 0 3px rgba(26, 58, 107, 0.06);
+    background: #fff;
+}
+
+.cf-form input::placeholder,
+.cf-form textarea::placeholder {
+    color: #aaa;
+}
+
+.cf-form select {
+    appearance: auto;
+    cursor: pointer;
+}
+
+.cf-form textarea {
+    resize: none;
+}
+
+.cf-form button {
+    padding: 13px;
+    background: var(--gold);
+    color: var(--navy);
+    font-size: 0.875rem;
+    font-weight: 800;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    transition: all 0.25s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 46px;
+}
+
+.cf-form button:hover {
+    background: #e09612;
+    transform: translateY(-1px);
+}
+
+.cf-form button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.cf-spinner {
+    width: 18px;
+    height: 18px;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top-color: #fff;
+    border-radius: 50%;
+    animation: cspin 0.7s linear infinite;
+}
+
+@keyframes cspin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.cf-success {
+    text-align: center;
+    padding: 40px 16px;
+}
+
+.cf-check {
+    width: 48px;
+    height: 48px;
+    background: #e8f5e9;
+    color: #2e7d32;
+    font-size: 1.5rem;
+    font-weight: 700;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 12px;
+}
+
+.cf-success h4 {
+    font-size: 1.1rem;
+    font-weight: 800;
+    color: var(--navy);
+    margin-bottom: 4px;
+}
+
+.cf-success p {
+    font-size: 0.85rem;
+    color: var(--text-muted);
+}
+
+.cf-error {
+    font-size: 0.75rem;
+    color: var(--red);
+    text-align: center;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 900px) {
+    .contact-container {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-info {
+        padding: 28px 24px;
+    }
+
+    .contact-cards {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 10px;
+    }
+
+    .contact-form-wrap {
+        padding: 28px 24px;
+    }
+}
+
+@media (max-width: 600px) {
+    .contact {
+        padding: 40px 0;
+    }
+
+    .contact-container {
+        border-radius: 12px;
+    }
+
+    .contact-info {
+        padding: 24px 20px;
+    }
+
+    .contact-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-heading {
+        font-size: 1.3rem;
+        margin-bottom: 20px;
+    }
+
+    .contact-form-wrap {
+        padding: 24px 20px;
+    }
+
+    .cf-heading {
+        font-size: 1.2rem;
+    }
+
+    .cf-form input,
+    .cf-form select,
+    .cf-form textarea {
+        padding: 10px 12px;
+        font-size: 0.82rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .c-card {
+        padding: 10px;
+    }
+
+    .c-card-icon {
+        width: 32px;
+        height: 32px;
+    }
+
+    .c-card h4 {
+        font-size: 0.78rem;
+    }
+
+    .c-card a,
+    .c-card p {
+        font-size: 0.72rem;
+    }
+}
