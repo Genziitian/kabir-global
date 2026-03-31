@@ -24,7 +24,7 @@ export default function Footer() {
                     {/* Col 1 — Logo & About */}
                     <div className="footer-brand">
                         <div className="footer-logo">
-                            <img src="/logo-kabir-global-academy.png" alt="KGA" style={{ height: '60px', width: 'auto' }} />
+                            <img src="/main-logo.png" alt="KGA" style={{ height: '60px', width: 'auto' }} />
                         </div>
                         <p className="footer-desc">Kabir Global Academy is dedicated to nurturing unique potential in every child through a holistic and future-ready curriculum.</p>
                         <div className="footer-socials">

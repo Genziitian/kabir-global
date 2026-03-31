@@ -18,7 +18,7 @@ export default function About() {
 
                     {/* Right — White content */}
                     <div className="about-right">
-                        <img src="/logo-kabir-global-academy.png" alt="KGA" className="about-kga-logo" style={{ height: '70px', width: 'auto' }} />
+                        <img src="/main-logo.png" alt="KGA" className="about-kga-logo" style={{ height: '70px', width: 'auto' }} />
 
                         <h2 className="about-aim-title">A Legacy shaped by Care & Conviction</h2>
                         <div className="about-legacy-text">

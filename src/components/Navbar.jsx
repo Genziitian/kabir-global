@@ -35,7 +35,7 @@ export default function Navbar() {
                 {/* Logo — Left */}
                 <a href="#home" className="navbar-logo">
                     <img
-                        src="/logo-kabir-global-academy.png"
+                        src="/main-logo.png"
                         alt="Kabir Global Academy"
                         className="navbar-logo-img"
                         style={{ height: '50px', width: 'auto' }}
