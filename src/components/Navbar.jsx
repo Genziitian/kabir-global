@@ -38,13 +38,8 @@ export default function Navbar() {
                         src="/logo-kabir-global-academy.png"
                         alt="Kabir Global Academy"
                         className="navbar-logo-img"
-                        width="48"
-                        height="48"
+                        style={{ height: '50px', width: 'auto' }}
                     />
-                    <div className="navbar-logo-text">
-                        <span className="navbar-logo-name">Kabir Global</span>
-                        <span className="navbar-logo-sub">Academy</span>
-                    </div>
                 </a>
 
                 {/* Nav Links — Center */}
