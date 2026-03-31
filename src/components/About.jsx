@@ -20,16 +20,12 @@ export default function About() {
                     <div className="about-right">
                         <img src="/logo-kabir-global-academy.png" alt="KGA" className="about-kga-logo" />
 
-                        <h2 className="about-aim-title">Our aim is to…</h2>
-
-                        <ul className="about-aim-list">
-                            <li><span className="aim-bullet">✦</span> Devise and implement a programme that is based on the latest global theories of learning & child development, within the context of a deep Indian ethos.</li>
-                            <li><span className="aim-bullet">✦</span> Ignite individual creativity and problem solving skills through the implementation of a flexible, non-formal programme that engages children in collaborative work, experiential learning and creative expressions.</li>
-                            <li><span className="aim-bullet">✦</span> Promote the art of story-telling in both traditional and modern formats to enhance expression through varied forms & languages and with it learn about vocabulary, history, customs, festivals, morality and values.</li>
-                            <li><span className="aim-bullet">✦</span> Provide opportunities & experiences for learning basic life skills that will help children to be independent, self sufficient and socially well-adjusted.</li>
-                            <li><span className="aim-bullet">✦</span> We believe that Parents are Partners in Education and with their support one can unleash a child’s real potential.</li>
-                            <li><span className="aim-bullet">✦</span> Provide holistic education that allows children to develop and grow – physically, mentally, emotionally & spiritually.</li>
-                        </ul>
+                        <h2 className="about-aim-title">A Legacy shaped by Care & Conviction</h2>
+                        <div className="about-legacy-text">
+                            <p>For 35 years, Kabir families have trusted us with something they cannot get back — their children's time. That trust shapes everything we do.</p>
+                            <p>In 2023, we asked ourselves which curriculum best prepares children for the world they are about to inherit. We reviewed every option available. The answer was Cambridge.</p>
+                            <p>The Kabir Global Academy is that answer — Vadodara's first Cambridge school, built on three and a half decades of Kabir education.</p>
+                        </div>
                     </div>
                 </div>
 
@@ -52,15 +48,15 @@ export default function About() {
                     <div className="astat">
                         <span className="astat-star">✦</span>
                         <div>
-                            <strong>Three Pathways</strong>
-                            <span>State Board, CBSE, Cambridge</span>
+                            <strong>10,000+ Schools</strong>
+                            <span>In the worldwide Cambridge network</span>
                         </div>
                     </div>
                     <div className="astat">
                         <span className="astat-star">✦</span>
                         <div>
-                            <strong>8K+ Trusting Parents</strong>
-                            <span>Growing community of families</span>
+                            <strong>160+ Countries</strong>
+                            <span>Cambridge is used across the globe</span>
                         </div>
                     </div>
                 </div>

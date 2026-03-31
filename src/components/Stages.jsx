@@ -6,18 +6,16 @@ const stages = [
         image: '/cm-7.jpg',
         ageBadge: 'Age 3–5',
         color: '#f5a623',
-        title: 'Early Years',
-        subtitle: 'Headstart Programme',
-        desc: 'Nurturing young minds with our Headstart program. Watch them thrive in a nurturing environment tailored for their growth.',
+        title: 'Cambridge Early Years',
+        desc: 'Nurturing young minds with a child-centred and play-based approach. Watch them thrive in a nurturing environment tailored for their growth.',
         points: ['Celebrate Uniqueness', 'Independence & Empowerment', 'Strong Bonds & Close Connections'],
         grades: ['Nursery', 'LKG', 'UKG'],
     },
     {
         image: '/cm-10.jpg',
-        ageBadge: 'Age 5–10',
+        ageBadge: 'Age 5–11',
         color: '#2e7d32',
-        title: 'Primary School',
-        subtitle: 'Launch Programme',
+        title: 'Cambridge Primary',
         desc: 'Inspiring curiosity and inquiry. Our rigorous curriculum challenges students to think critically, question, analyse, and solve problems.',
         points: ['Warm & Intimate Environment', 'Versatile Learning Approach', 'Strengthened Foundations'],
         grades: ['Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5'],
@@ -26,18 +24,16 @@ const stages = [
         image: '/cm-13.jpg',
         ageBadge: 'Age 11–14',
         color: '#1565c0',
-        title: 'Secondary Years',
-        subtitle: 'Middle Years Programme',
-        desc: 'A transitional phase focusing on holistic development and preparing students for the rigors of senior school academics and life skills.',
+        title: 'Cambridge Lower Secondary',
+        desc: 'A transitional phase focusing on holistic development and preparing students for the rigors of upper secondary academics and life skills.',
         points: ['Critical Thinking', 'Subject Specialization', 'Holistic Growth'],
-        grades: ['Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Grade 10'],
+        grades: ['Grade 6', 'Grade 7', 'Grade 8'],
     },
     {
         image: '/cm-17.jpg',
         ageBadge: 'Age 14–16',
         color: '#1a3a6b',
-        title: 'Upper Secondary',
-        subtitle: 'Cambridge IGCSE',
+        title: 'Cambridge IGCSE',
         desc: 'Broad adaptable curriculum with fair and reliable assessment — 70+ subjects preparing students for global certifications.',
         points: ['Cambridge IGCSE™', 'Fair & Reliable Assessment', 'Insight to Optimise Achievement'],
         grades: ['Grade 9', 'Grade 10'],
@@ -46,8 +42,7 @@ const stages = [
         image: '/cm-18.jpg',
         ageBadge: 'Age 16–19',
         color: '#b22234',
-        title: 'Senior School',
-        subtitle: 'Cambridge A Levels',
+        title: 'Cambridge AS & A Levels',
         desc: 'World-class finishing programmes preparing students for university success and beyond with global recognition.',
         points: ['Cambridge AS & A Levels', 'Career Counselling', 'Predictive Performance Insight'],
         grades: ['Grade 11', 'Grade 12'],
@@ -81,8 +76,8 @@ export default function Stages() {
         <section className="stages" id="academics">
             <div className="stages-container">
                 <div className="stages-header">
-                    <h2 className="stages-title">Stages of Excellence</h2>
-                    <p className="stages-sub">One coherent path from age 3 to 19 — each stage builds on the previous, creating deep understanding and confidence.</p>
+                    <h2 className="stages-title">One coherent path. From age 3 to 19.</h2>
+                    <p className="stages-sub">Cambridge is designed as a single connected journey — each stage builds deliberately on the one before.</p>
                 </div>
 
                 <div className="stages-scroll">
@@ -98,7 +93,6 @@ export default function Stages() {
                                 {/* Content */}
                                 <div className="scard-body">
                                     <h3 className="scard-title">{s.title}</h3>
-                                    <span className="scard-subtitle" style={{ color: s.color }}>{s.subtitle}</span>
                                     <p className="scard-desc">{s.desc}</p>
 
                                     <ul className="scard-points">
@@ -138,7 +132,7 @@ export default function Stages() {
 
                         <div className="stages-modal-header" style={{ background: popup.color }}>
                             <h3>{popup.title}</h3>
-                            <span>{popup.subtitle} • {popup.ageBadge}</span>
+                            <span>{popup.ageBadge}</span>
                         </div>
 
                         {submitted ? (

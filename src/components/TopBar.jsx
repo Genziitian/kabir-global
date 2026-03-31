@@ -1,11 +1,7 @@
 import './TopBar.css';
 
 const marqueeItems = [
-    { text: 'Academic Year 2026-27 — Enroll Now for Pre-KG to Grade 12!' },
-    { text: 'CBSE Affiliated  |  ISO 9001:2015 Certified  |  10+ Years of Academic Excellence' },
-    { text: '100% Board Result  |  State-Level Sports Champions' },
-    { text: 'Smart Classrooms  |  AI-Integrated Learning  |  Holistic Development' },
-    { text: 'Global Exposure Programs  |  International Collaborations' },
+    { text: "Vadodara's 1st Cambridge Pathway School · Admissions Open AY 2026–27 · Cambridge Early Years (Age 3+) & Grade 1 · Makrand Desai Road · Call: +91 90990 98479" },
 ];
 
 export default function TopBar() {

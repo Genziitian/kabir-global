@@ -9,11 +9,11 @@ const quickLinks = [
 ];
 
 const academics = [
-    { label: 'Early Years', href: '#academics' },
-    { label: 'Primary School', href: '#academics' },
-    { label: 'Cambridge Secondary', href: '#academics' },
+    { label: 'Cambridge Early Years', href: '#academics' },
+    { label: 'Cambridge Primary', href: '#academics' },
+    { label: 'Cambridge Lower Secondary', href: '#academics' },
     { label: 'Cambridge IGCSE', href: '#academics' },
-    { label: 'Cambridge A Levels', href: '#academics' },
+    { label: 'Cambridge AS & A Levels', href: '#academics' },
 ];
 
 export default function Footer() {
@@ -67,22 +67,21 @@ export default function Footer() {
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.37 1.6.7 2.35a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.75.33 1.54.57 2.35.7A2 2 0 0122 16.92z" /></svg>
                                 <div>
                                     <strong>Call Us</strong>
-                                    <span>+91 90990 39802</span>
-                                    <span>+91 70469 22221</span>
+                                    <span>+91 90990 98479</span>
                                 </div>
                             </div>
                             <div className="fc-item">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><path d="m22 6-10 7L2 6" /></svg>
                                 <div>
                                     <strong>Email Us</strong>
-                                    <span>info@tenderfeet.in</span>
+                                    <span>info@kabirglobalacademy.com</span>
                                 </div>
                             </div>
                             <div className="fc-item">
                                 <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z" /><circle cx="12" cy="10" r="3" /></svg>
                                 <div>
                                     <strong>Visit Us</strong>
-                                    <span>Nr Kabir Circle, Makrand Desai Rd, Vadodara</span>
+                                    <span>Makrand Desai Road, Vadodara</span>
                                 </div>
                             </div>
                         </div>

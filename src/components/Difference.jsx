@@ -4,17 +4,17 @@ const pillars = [
     {
         image: '/cm-17.jpg',
         title: 'Inquiry-Led Learning',
-        desc: "Curiosity drives every discovery. We don't just teach subjects—we help children fall in love with questions, exploration, and the joy of finding answers."
+        desc: "In a Cambridge classroom, the lesson begins with a question. Students explore concepts — in Science they design experiments, in Economics they run a mock market. Learning happens through doing, and through thinking about what they did."
     },
     {
         image: '/cm-10.jpg',
         title: 'Personal Connections',
-        desc: "With excellent student-teacher ratios from the early years, every child is known, seen, and nurtured. We're not just educators—we're partners in each child's journey."
+        desc: "With excellent student-teacher ratios from the early years, every child is known, seen, and nurtured. Every child at KGA is known by name, by strength, and by what they find hard."
     },
     {
         image: '/cm-7.jpg',
         title: 'Real-World Relevance',
-        desc: "From creative arts to Makerspace, from community field trips to scientific investigations, learning at KGA is tangible, meaningful & connected to life beyond the classroom."
+        desc: "Global Perspectives — a subject with no equivalent in CBSE or State Board — asks students to research a real-world issue, build an argument, and defend it. This is the kind of thinking universities and employers look for."
     }
 ];
 
@@ -23,8 +23,7 @@ export default function Difference() {
         <section className="diff" id="difference">
             <div className="diff-container">
                 <div className="diff-header">
-                    <h2 className="diff-title">The Kabir Global Difference</h2>
-                    <span className="diff-sub">THREE CORE PILLARS:</span>
+                    <h2 className="diff-title">What makes a Cambridge education different</h2>
                 </div>
 
                 <div className="diff-grid">

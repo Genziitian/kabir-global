@@ -36,13 +36,13 @@ export default function ThankYou() {
                 <div className="ty-contact">
                     <p>Have questions? Reach us directly:</p>
                     <div className="ty-contact-row">
-                        <a href="tel:+919099039802">
+                        <a href="tel:+919099098479">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M22 16.92v3a2 2 0 01-2.18 2 19.79 19.79 0 01-8.63-3.07 19.5 19.5 0 01-6-6A19.79 19.79 0 012.12 4.18 2 2 0 014.11 2h3a2 2 0 012 1.72c.13.81.37 1.6.7 2.35a2 2 0 01-.45 2.11L8.09 9.91a16 16 0 006 6l1.27-1.27a2 2 0 012.11-.45c.75.33 1.54.57 2.35.7A2 2 0 0122 16.92z" /></svg>
-                            +91 90990 39802
+                            +91 90990 98479
                         </a>
-                        <a href="mailto:info@tenderfeet.in">
+                        <a href="mailto:info@kabirglobalacademy.com">
                             <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" /><path d="m22 6-10 7L2 6" /></svg>
-                            info@tenderfeet.in
+                            info@kabirglobalacademy.com
                         </a>
                     </div>
                 </div>

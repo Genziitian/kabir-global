@@ -2,7 +2,7 @@ import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import './Contact.css';
 
-const GOOGLE_SHEET_URL = 'YOUR_GOOGLE_APPS_SCRIPT_URL';
+const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyuxnjG9ELpSdtEoCCwo0KWzT1pau79rCmeLnsZAcJV35_VFAX3Tz6S9Px3xXmkqgap/exec';
 
 const gradeOptions = ['Select Class*', 'Pre-KG', 'Nursery', 'Junior KG', 'Senior KG', 'Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5', 'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Grade 10', 'Grade 11', 'Grade 12'];
 
@@ -48,8 +48,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h4>Call Us</h4>
-                                <a href="tel:+919099039802">+91 90990 39802</a>
-                                <a href="tel:+917046922221">+91 70469 22221</a>
+                                <a href="tel:+919099098479">+91 90990 98479</a>
                             </div>
                         </div>
 
@@ -59,7 +58,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h4>Email Us</h4>
-                                <a href="mailto:info@tenderfeet.in">info@tenderfeet.in</a>
+                                <a href="mailto:info@kabirglobalacademy.com">info@kabirglobalacademy.com</a>
                             </div>
                         </div>
 
@@ -69,7 +68,7 @@ export default function Contact() {
                             </div>
                             <div>
                                 <h4>Visit Us</h4>
-                                <p>Nr Kabir Circle, Makrand Desai Road,<br />Vadodara – 390 015, Gujarat, India</p>
+                                <p>Makrand Desai Road, Vadodara – 390 015, Gujarat, India</p>
                             </div>
                         </div>
                     </div>
@@ -78,7 +77,7 @@ export default function Contact() {
                 {/* Right — Form */}
                 <div className="contact-form-wrap">
                     <h3 className="cf-heading">Admission Enquiry</h3>
-                    <span className="cf-sub">Start Your Journey</span>
+                    <span className="cf-sub">Admissions open for AY 2026–27</span>
 
                     {status === 'success' ? (
                         <div className="cf-success">

@@ -7,12 +7,12 @@ const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyuxnjG9ELpSdt
 const slides = [
     {
         image: '/gallery-1.jpg',
-        badge: 'Est. 2015 | 10+ Years Excellence',
-        title: 'Where',
-        titleItalic: 'Learning',
-        titleEnd: 'Meets Joy',
-        desc: 'A nurturing space where children discover their potential.',
-        tags: ['12:1 Student Ratio', '100% Pass Rate'],
+        badge: "Vadodara's 1st Cambridge School",
+        title: "Vadodara's first",
+        titleItalic: 'Cambridge school',
+        titleEnd: '35 years of Kabir behind it.',
+        desc: 'Admissions open for Cambridge Early Years (Age 3+) and Grade 1 — Academic Year 2026–27',
+        tags: ["Vadodara's 1st Cambridge School", '35 Years of Kabir Legacy'],
     },
     {
         image: '/gallery-5.jpg',
@@ -136,10 +136,8 @@ export default function Hero() {
                                     </span>
                                 ))}
                             </div>
-                            <a href="#academics" className="hero-cta-btn">
-                                Explore Academics
-                                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"><path d="M5 12h14" /><path d="m12 5 7 7-7 7" /></svg>
-                            </a>
+                            {/* Explore Academics CTA button removed per request */}
+                            <div style={{ marginTop: '2rem' }}></div>
                         </div>
 
                         {/* Arrows */}
@@ -162,7 +160,7 @@ export default function Hero() {
                 {/* ===== RIGHT — FORM ===== */}
                 <div className="hero-form-panel">
                     <div className="hero-form-card">
-                        <h3 className="hero-form-heading">Admission Enquiry</h3>
+                        <h3 className="hero-form-heading">Start the conversation</h3>
 
                         {formStatus === 'success' ? (
                             <div className="hero-form-success">

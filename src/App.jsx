@@ -6,7 +6,7 @@ import About from './components/About';
 import Difference from './components/Difference';
 import Stages from './components/Stages';
 import BrochureBanner from './components/BrochureBanner';
-import CampusLife from './components/CampusLife';
+// CampusLife removed per request
 import Achievements from './components/Achievements';
 import Testimonials from './components/Testimonials';
 import FAQs from './components/FAQs';
@@ -26,7 +26,6 @@ function LandingPage() {
         <Difference />
         <Stages />
         <BrochureBanner />
-        <CampusLife />
         <Achievements />
         <Testimonials />
         <FAQs />

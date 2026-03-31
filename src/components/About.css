@@ -121,6 +121,20 @@
     margin-top: 2px;
 }
 
+.about-legacy-text {
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+}
+
+.about-legacy-text p {
+    font-size: 1.05rem;
+    color: var(--text-dark);
+    line-height: 1.7;
+    margin: 0;
+    font-weight: 500;
+}
+
 /* ===== STATS STRIP ===== */
 .about-stats-strip {
     display: grid;
