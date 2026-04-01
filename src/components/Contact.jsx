@@ -1,5 +1,6 @@
-import { useState } from 'react';
+import { useState, useRef } from 'react';
 import { useNavigate } from 'react-router-dom';
+import { trackLeadCAPI } from '../utils/trackLead';
 import './Contact.css';
 
 const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyuxnjG9ELpSdtEoCCwo0KWzT1pau79rCmeLnsZAcJV35_VFAX3Tz6S9Px3xXmkqgap/exec';
@@ -9,12 +10,26 @@ const gradeOptions = ['Select Class*', 'Pre-KG', 'Nursery', 'Junior KG', 'Senior
 export default function Contact() {
     const navigate = useNavigate();
     const [status, setStatus] = useState('idle');
-    const [form, setForm] = useState({ studentName: '', grade: '', parentName: '', phone: '', message: '' });
+    const [form, setForm] = useState({ studentName: '', grade: '', parentName: '', phone: '', email: '', message: '' });
+    const isSubmitting = useRef(false);
 
     const handleSubmit = async (e) => {
         e.preventDefault();
+        if (isSubmitting.current) return;
+        isSubmitting.current = true;
         setStatus('sending');
+
         try {
+            const eventId = "lead_" + Date.now() + "_" + Math.random().toString(36).substring(2, 9);
+
+            // 1. Fire Browser Pixel Lead Event with Deduplication ID
+            if (window.fbq) {
+                window.fbq('track', 'Lead', {
+                    content_name: 'Admission Enquiry',
+                    content_category: 'Leads'
+                }, { eventID: eventId });
+            }
+
             const payload = new FormData();
             Object.entries(form).forEach(([k, v]) => payload.append(k, v));
             payload.append('timestamp', new Date().toLocaleString('en-IN', { timeZone: 'Asia/Kolkata' }));
@@ -27,10 +42,27 @@ export default function Contact() {
             });
 
             await fetch(GOOGLE_SHEET_URL, { method: 'POST', body: payload });
+
+            // 2. Send to Facebook Conversions API (CAPI) with same eventID
+            await trackLeadCAPI({
+                firstName: form.studentName,
+                lastName: form.parentName,
+                phone: form.phone,
+                email: form.email,
+                eventID: eventId
+            });
+
             setStatus('success');
-            setForm({ studentName: '', grade: '', parentName: '', phone: '', message: '' });
-            setTimeout(() => navigate('/thank-you'), 1000);
-        } catch { setStatus('error'); setTimeout(() => setStatus('idle'), 4000); }
+            setForm({ studentName: '', grade: '', parentName: '', phone: '', email: '', message: '' });
+            setTimeout(() => {
+                isSubmitting.current = false;
+                navigate('/thank-you');
+            }, 1000);
+        } catch {
+            setStatus('error');
+            isSubmitting.current = false;
+            setTimeout(() => setStatus('idle'), 4000);
+        }
     };
 
     return (
@@ -92,7 +124,10 @@ export default function Contact() {
                                 {gradeOptions.map((o, i) => <option key={i} value={i === 0 ? '' : o} disabled={i === 0}>{o}</option>)}
                             </select>
                             <input type="text" name="parentName" value={form.parentName} onChange={(e) => setForm({ ...form, parentName: e.target.value })} placeholder="Parent's Name*" required />
-                            <input type="tel" name="phone" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="Phone No.*" required pattern="[0-9]{10}" />
+                            <div className="form-row-2">
+                                <input type="tel" name="phone" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} placeholder="Phone No.*" required pattern="[0-9]{10}" />
+                                <input type="email" name="email" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} placeholder="Email Address (Optional)" />
+                            </div>
                             <textarea name="message" rows="3" value={form.message} onChange={(e) => setForm({ ...form, message: e.target.value })} placeholder="Message (Optional)"></textarea>
                             <button type="submit" disabled={status === 'sending'}>
                                 {status === 'sending' ? <span className="cf-spinner"></span> : 'Submit Enquiry'}

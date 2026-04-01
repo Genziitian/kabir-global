@@ -6,10 +6,9 @@ const BROCHURE_URL = 'https://drive.google.com/file/d/1KK3uspwcKnlyFU02TERL7afbk
 export default function ThankYou() {
     useEffect(() => {
         window.scrollTo(0, 0);
-        // Track Facebook PageView and Lead event on Thank You page
+        // Track Facebook PageView on Thank You page
         if (window.fbq) {
             window.fbq('track', 'PageView');
-            window.fbq('track', 'Lead');
         }
     }, []);
 

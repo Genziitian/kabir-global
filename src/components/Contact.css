@@ -123,6 +123,18 @@
     gap: 12px;
 }
 
+.form-row-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+@media (max-width: 600px) {
+    .form-row-2 {
+        grid-template-columns: 1fr;
+    }
+}
+
 .cf-form input,
 .cf-form select,
 .cf-form textarea {
