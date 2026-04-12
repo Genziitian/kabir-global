@@ -4,9 +4,18 @@ import './BrochureBanner.css';
 const BROCHURE_URL = 'https://drive.google.com/file/d/1KK3uspwcKnlyFU02TERL7afbkaQHulwz/view?usp=sharing';
 const GOOGLE_SHEET_URL = 'https://script.google.com/macros/s/AKfycbyuxnjG9ELpSdtEoCCwo0KWzT1pau79rCmeLnsZAcJV35_VFAX3Tz6S9Px3xXmkqgap/exec';
 
+const gradeOptions = [
+    'Select Class*',
+    'Pre-KG', 'Nursery', 'Junior KG', 'Senior KG',
+    'Grade 1', 'Grade 2', 'Grade 3', 'Grade 4', 'Grade 5',
+    'Grade 6', 'Grade 7', 'Grade 8', 'Grade 9', 'Grade 10',
+    'Grade 11 (Science)', 'Grade 11 (Commerce)',
+    'Grade 12 (Science)', 'Grade 12 (Commerce)',
+];
+
 export default function BrochureBanner() {
     const [show, setShow] = useState(false);
-    const [form, setForm] = useState({ name: '', email: '', phone: '' });
+    const [form, setForm] = useState({ name: '', email: '', phone: '', grade: '' });
     const [status, setStatus] = useState('idle');
 
     const open = () => { setShow(true); document.body.style.overflow = 'hidden'; };
@@ -46,7 +55,7 @@ export default function BrochureBanner() {
         setTimeout(() => {
             close();
             setStatus('idle');
-            setForm({ name: '', email: '', phone: '' });
+            setForm({ name: '', email: '', phone: '', grade: '' });
             window.location.href = '/thank-you';
         }, 1500);
     };
@@ -95,6 +104,11 @@ export default function BrochureBanner() {
                                 </div>
                                 <form className="bp-form" onSubmit={handleSubmit}>
                                     <input type="text" placeholder="Your Name *" value={form.name} onChange={(e) => setForm({ ...form, name: e.target.value })} required />
+                                    <select value={form.grade} onChange={(e) => setForm({ ...form, grade: e.target.value })} required>
+                                        {gradeOptions.map((opt, i) => (
+                                            <option key={i} value={i === 0 ? '' : opt} disabled={i === 0}>{opt}</option>
+                                        ))}
+                                    </select>
                                     <input type="email" placeholder="Email Address *" value={form.email} onChange={(e) => setForm({ ...form, email: e.target.value })} required />
                                     <input type="tel" placeholder="Phone Number *" value={form.phone} onChange={(e) => setForm({ ...form, phone: e.target.value })} required pattern="[0-9]{10}" />
                                     <button type="submit">Download Brochure</button>
